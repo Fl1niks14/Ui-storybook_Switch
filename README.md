@@ -1,54 +1,35 @@
-# React + TypeScript + Vite
+# Ui-storybook_Switch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Проект **Ui-storybook_Switch** представляет собой шаблон для разработки компонентa пользовательского интерфейса с использованием **React**, **TypeScript**, **Vite** и **Storybook**. Он предоставляет минимальную настройку для быстрой разработки и документирования компонентa пользовательского интерфейса. Switch
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📁 Структура проекта
+```bash
+Ui-storybook_Switch/
+├── .storybook/ # Конфигурация Storybook
+├── src/ # Исходный код компонентов
+├── storybook-static/ # Сборка Storybook
+├── index.html # Точка входа для Vite
+├── package.json # Зависимости и скрипты
+├── vite.config.ts # Конфигурация Vite
+├── tsconfig.json # Общая конфигурация TypeScript
+├── tsconfig.app.json # Конфигурация TypeScript для приложения
+├── tsconfig.node.json # Конфигурация TypeScript для Node.js
+└── README.md # Документация проекта
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Используемые технологии
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React** — библиотека для создания пользовательских интерфейсов.
+- **TypeScript** — язык программирования, расширяющий возможности JavaScript и поддерживающий статическую типизацию.
+- **Vite** — современный инструмент сборки для фронтенд-разработки.
+- **Storybook** — инструмент для разработки и документирования UI-компонентов в изоляции.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 🚀 Установка и запуск
+Установите зависимости:
+```bash
+npm install
+```
+Откройте Storybook:
+```bash
+npm run storybook
 ```
